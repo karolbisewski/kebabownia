@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+RewriteEngine on    
+
+
+ErrorDocument 404 /index.php?site=404
+
+
+RewriteBase /katalog
+RewriteRule ^katalog/([^/]*)$ /index.php?site=order&kategoria=$1
+
+RewriteBase /kontakt
+RewriteRule ^kontakt$ /index.php?site=contact
+
+RewriteBase /login
+RewriteRule ^login$ /index.php?site=login
+
+RewriteBase /logout
+RewriteRule ^logout$ /index.php?site=logout
